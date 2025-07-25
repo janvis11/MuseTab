@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "MuseTab: GPT Web Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered web assistant that analyzes webpage content and answers questions using GPT-4",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "MuseTab"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

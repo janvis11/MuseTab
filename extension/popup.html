@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MuseTab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🧠 MuseTab</h1>
+      <p>Your AI-powered Web Assistant</p>
+    </header>
+
+    <section class="settings">
+      <label class="toggle-container">
+        <input type="checkbox" id="includeLinks" checked />
+        <span class="toggle-slider"></span>
+        <span class="toggle-label">Include linked pages</span>
+      </label>
+    </section>
+
+    <main class="chat-container" id="chatContainer">
+      <div class="welcome-message">
+        <p>👋 Welcome to MuseTab! Ask anything about the content of this page.</p>
+      </div>
+    </main>
+
+    <footer class="input-section">
+      <div class="input-container">
+        <textarea
+          id="userInput"
+          placeholder="Ask about this webpage..."
+          rows="2"
+        ></textarea>
+        <button id="sendButton" class="send-button" title="Send">
+          <span class="send-icon">➤</span>
+        </button>
+      </div>
+      <div class="status" id="status"></div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
